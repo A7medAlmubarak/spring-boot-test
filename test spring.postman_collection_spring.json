@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "4f57f90b-b8aa-453a-9af8-e093b585d45e",
+		"name": "test spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18448798"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ahmed@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "#Aa12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ahmed@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "#Aa12345678",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "asdasd",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "asdsa",
+									"type": "text"
+								},
+								{
+									"key": "PhoneNumber",
+									"value": "465464564654",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTQ0NTcsImV4cCI6MTczMDY1NjI1N30.EHCA0vuY4K-So41_5ehOqRcJg63zKbePWcF1wXKYmwQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTQ3NDQsImV4cCI6MTczMDY1NjU0NH0.SzR9nNUuWrWbU74cRLSnlwrawMAheBldVtd1_ECxzYY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "dasasd@fsafasf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTQ4MDYsImV4cCI6MTczMDY1NjYwNn0.2VWRq26gfwfGcE4HNsMFtq31sNdSOPL4vxmGjA38518",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "dasasd@fsafasf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "getAllBooks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTQ4NjAsImV4cCI6MTczMDY1NjY2MH0.M3lkp5YYQNuQa8vp-NFLhuHy75mCBSUGveGnZaunmT0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBook by ids",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTUxMDMsImV4cCI6MTczMDY1NjkwM30.d-6Y2Y0mOMbBdjveOaFPj78J8i06I6aRHyIsw3mjbRE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "To Kill a Mockingbird",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Harper Lee",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "978-0446310789",
+									"type": "text"
+								},
+								{
+									"key": "publicationYear",
+									"value": "1960",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTUxMDMsImV4cCI6MTczMDY1NjkwM30.d-6Y2Y0mOMbBdjveOaFPj78J8i06I6aRHyIsw3mjbRE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "asda",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "757",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "772727",
+									"type": "text"
+								},
+								{
+									"key": "publicationYear",
+									"value": "5275",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NTUxMDMsImV4cCI6MTczMDY1NjkwM30.d-6Y2Y0mOMbBdjveOaFPj78J8i06I6aRHyIsw3mjbRE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "asda",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "757",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "772727",
+									"type": "text"
+								},
+								{
+									"key": "publicationYear",
+									"value": "5275",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BorrowingRecord",
+			"item": [
+				{
+					"name": "getAllBorrowingRecords",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2NjgxMDIsImV4cCI6MTczMDY2OTkwMn0.0ln5njFdxIVP6t5gmeRiTkh5gbu8PRBJUF2jgVTJX-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/borrowing-records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"borrowing-records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBorrowingRecordById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2Njg0NTQsImV4cCI6MTczMDY3MDI1NH0.Hsov4fNKaeTom2bQElVR8WZ1btcieLBxt_TyrD9up-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/borrowing-records/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"borrowing-records",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrowing book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2Njk0ODQsImV4cCI6MTczMDY3MTI4NH0.n214cyyl8-98MweySiD-RnE3T28VtDMFI_ttXOainTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "borrowingDate",
+									"value": "2000-01-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/borrowing-records/patron/1/book/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"borrowing-records",
+								"patron",
+								"1",
+								"book",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrowing book Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE3MzA2Njk5NjUsImV4cCI6MTczMDY3MTc2NX0.unOTqKrqgdSzyX2-q5RoeDWoLgeGt8csvDjIb3u9QWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "borrowingDate",
+									"value": "2000-01-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/borrowing-records/return/patron/1/book/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"borrowing-records",
+								"return",
+								"patron",
+								"1",
+								"book",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
